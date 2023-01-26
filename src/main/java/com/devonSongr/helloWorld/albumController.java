@@ -9,6 +9,11 @@ import org.springframework.web.bind.annotation.*;
 
 public class albumController {
 
+    @GetMapping("/")
+    public String getHome(){
+        return "welcome.html";
+    }
+
     @GetMapping("/albums")
     public String getAlbums(Model m){
         m.addAttribute("");
