@@ -1,23 +1,23 @@
 package com.devonSongr.helloWorld;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
 
 
-public class helloController {
+public class albumController {
 
-    @ResponseBody
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String getHome(){
-        return "hello world";
-
+    @GetMapping("/albums")
+    public String getAlbums(Model m){
+        m.addAttribute("");
+        return "albums";
     }
 
     @GetMapping("/hello")
     public String getHello(Model m){
-        m.
+        m.addAttribute("name", "Ted");
         return "hello";
     }
 
