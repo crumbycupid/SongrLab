@@ -1,10 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Albums</title>
 </head>
 <body>
+    <main>
+        <ul>
+            <li>
+                <div th:each="album: ${albums}"></div>
+                <img src="" alt="Placeholder">
+                <div>
+                    <p th:text="@{albums.artist}">Artist</p>
+                    <p th:text="@{albums.songCount}">SongCount</p>
+                    <p th:text="@{albums.length}">Length</p>
+                </div>
+            </li>
+            <li>
+                <div th:each="album: ${albums}"></div>
+                <img src="" alt="Placeholder">
+                <div>
+                    <p th:text="@{albums.artist}">Artist</p>
+                    <p th:text="@{albums.songCount}">SongCount</p>
+                    <p th:text="@{albums.length}">Length</p>
+                </div>
+            </li>
+            <li>
+                <div th:each="album: ${albums}"></div>
+                <img src="" alt="Placeholder">
+                <div>
+                    <p th:text="@{albums.artist}">Artist</p>
+                    <p th:text="@{albums.songCount}">SongCount</p>
+                    <p th:text="@{albums.length}">Length</p>
+                </div>
+            </li>
+        </ul>
+    </main>
 
 </body>
 </html>
