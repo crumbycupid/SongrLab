@@ -9,5 +9,4 @@ public interface AlbumRepository extends JpaRepository<Album, Long> {
     Album findByTitle(String title);
     Album findByArtist(String artist);
     Album findBySongCount(Integer songCount);
-    Album findByAlbumLength(Double length);
 }
